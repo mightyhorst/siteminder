@@ -1,0 +1,49 @@
+node_modules/
+devops/node_modules/
+cli/node_modules/
+frontend/node_modules/
+backend/node_modules/
+packages/node_modules/
+lerna-debug.log
+npm-debug.log
+packages/*/lib
+.idea
+
+# dependencies
+node_modules
+package.lock
+tsconfig.tsbuildinfo
+
+# IDE
+/.idea
+/.awcache
+
+#environment config
+.env
+
+# misc
+npm-debug.log
+lerna-debug.log
+
+# example
+/quick-start
+
+# tests
+/test
+/coverage
+/.nyc_output
+
+# dist
+/dist
+/public/lib
+/src/secretKeys.ts
+
+#cli symlink in root
+/cli.ts
+
+#logs
+**/logs/*.log
+**/logs/*.audit.json
+**/*error.log
+
+
