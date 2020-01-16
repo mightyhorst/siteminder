@@ -1,0 +1,14 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "frontend",
+    "backend",
+    "cli",
+    "devops"
+  ],
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}
