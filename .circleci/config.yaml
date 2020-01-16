@@ -1,0 +1,28 @@
+version: 2.1
+jobs:
+    backend_build_job:
+        docker:
+            - image: circleci/node:12
+        environment:
+            SAMPLE: bonersquad
+        steps:
+            - checkout
+
+            ##
+            # @name
+            # @description
+            # @tutorial
+            ##
+            - run:
+                name: build_step
+                command: |
+                    echo "hello world" 
+                    echo "CIRCLE_WORKING_DIRECTORY is $CIRCLE_WORKING_DIRECTORY"
+                    echo "SAMPLE is $SAMPLE"
+
+            - run:
+
+workflows:
+    master_workflow:
+        jobs:
+            - backend_build_job
