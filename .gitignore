@@ -9,6 +9,11 @@ npm-debug.log
 packages/*/lib
 .idea
 
+# nestjs 
+backend/.serverless
+backend/.dist
+backend/.build
+
 # dependencies
 node_modules
 package.lock
