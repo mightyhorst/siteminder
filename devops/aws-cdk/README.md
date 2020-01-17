@@ -1,6 +1,9 @@
-# Welcome to your CDK TypeScript project!
+# AWS CDK for SiteMinder IaaS
 
-This is a blank project for TypeScript development with CDK.
+This CDK will setup the following infrastruture:
+* IAM user for Serverless 
+
+The rest will be done by serverless cli.  
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
