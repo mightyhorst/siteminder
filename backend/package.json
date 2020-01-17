@@ -6,11 +6,13 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "start": "ts-node src/main",
-    "prestart:prod": "yarn run build",
     "start:dev": "ts-node-dev --respawn --watch --clear src/main",
+    "prestart:prod": "yarn run build",
     "start:prod": "node dist/main.js",
     "start:docker": "docker-compose up",
-    "test": "jest"
+    "test": "jest --passWithNoTests",
+    "test:unit": "echo \"todo\"",
+    "test:e2e": "echo \"todo\""
   },
   "dependencies": {
     "@nestjs/common": "6.2.2",
