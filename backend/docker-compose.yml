@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+    siteminder_backend_dev:
+        container_name: siteminder_backend_dev
+        restart: always
+        environment:
+            SENDGRID_KEY: todo
+        ports:
+            - "3000:3000"
+        build:
+            context: .
+            dockerfile: Dockerfile
+        command: ["yarn", "run", "start:dev"]
+
+    
