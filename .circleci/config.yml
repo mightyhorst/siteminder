@@ -38,12 +38,17 @@ jobs:
             # @description
             ##
             - run:
-                name: build_step
+                name: create_env_file
                 command: |
-                    echo "hello world" 
-                    echo "CIRCLE_WORKING_DIRECTORY is $CIRCLE_WORKING_DIRECTORY"
-                    echo "SAMPLE is $SAMPLE"
+                    touch .env 
+                    echo "SENDGRID_SECRET=$SENDGRID_SECRET" >> .env
+                    echo "SENDGRID_TEMPLATE=$SENDGRID_TEMPLATE" >> .env
+                    echo "aws_access_key_id=$aws_access_key_id" >> .env
+                    echo "aws_secret_access_key=$aws_secret_access_key" >> .env
+                    ls 
+                    echo "remove this asap ..." && cat .env 
 
+            
 
 workflows:
     master_workflow:

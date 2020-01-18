@@ -1,25 +1,30 @@
+# 
+
+# node_modules
 node_modules/
 devops/node_modules/
 cli/node_modules/
 frontend/node_modules/
 backend/node_modules/
 packages/node_modules/
+
+# lerna, npm
 lerna-debug.log
 npm-debug.log
 packages/*/lib
-.idea
+package.lock
+
+# ts 
+tsconfig.tsbuildinfo
 
 # nestjs 
 backend/.serverless
 backend/.dist
 backend/.build
 
-# dependencies
-node_modules
-package.lock
-tsconfig.tsbuildinfo
 
 # IDE
+.idea
 /.idea
 /.awcache
 
@@ -27,21 +32,22 @@ tsconfig.tsbuildinfo
 .env
 
 # misc
-npm-debug.log
-lerna-debug.log
 
 # example
-/quick-start
+# /quick-start
 
 # tests
-/test
+# /test
 /coverage
 /.nyc_output
 
-# dist
+# build and dist
 /dist
-/public/lib
-/src/secretKeys.ts
+/frontend/dist
+/frontend/build
+/backend/dist
+/backend/build
+/devops/
 
 #cli symlink in root
 /cli.ts
