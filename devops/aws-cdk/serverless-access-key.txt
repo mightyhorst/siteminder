@@ -1,0 +1,5 @@
+accessKey:
+AKIAXYKJ6JJ4IQKCKF4B
+
+secretAccessKey:
+7/KY2CulFa3UtwVGISwEVh/ora7CH0Rz+Hd2C+X6
