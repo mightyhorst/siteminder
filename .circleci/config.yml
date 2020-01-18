@@ -41,7 +41,7 @@ jobs:
                 name: create_env_file
                 command: |
                     touch .env 
-                    echo "SENDGRID_SECRET=$(SENDGRID_SECRET | base64 --decode)" >> .env
+                    echo "SENDGRID_SECRET=$(${SENDGRID_SECRET} | base64 --decode)" >> .env
                     echo "SENDGRID_TEMPLATE=$SENDGRID_TEMPLATE" >> .env
                     echo "aws_access_key_id=$aws_access_key_id" >> .env
                     echo "aws_secret_access_key=$aws_secret_access_key" >> .env
