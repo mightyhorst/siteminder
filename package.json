@@ -19,6 +19,8 @@
     }
   },
   "scripts": {
+    "---@build---": "-----------------",
+    "build": "cd backend && yarn run build",
     "---@start---": "-----------------",
     "start": "cd backend && yarn run start",
     "start:dev": "cd backend && yarn run start:dev",
@@ -29,7 +31,9 @@
     "test:unit": "cd backend && yarn run test:unit",
     "test:e2e": "cd backend && yarn run test:e2e",
     "---@deploy---": "-----------------",
-    "deploy": "cd backend && yarn run deploy"
+    "deploy": "cd backend && yarn run deploy",
+    "deploy:destroy": "cd backend && yarn run deploy:destroy",
+    "deploy:destroy:all": "cd backend && yarn run deploy:destroy && cd ../devops && cdk destroy"
   },
   "husky": {
     "hooks": {
