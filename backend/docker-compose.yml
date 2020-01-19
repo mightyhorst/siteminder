@@ -4,8 +4,8 @@ services:
     siteminder_backend_dev:
         container_name: siteminder_backend_dev
         restart: always
-        environment:
-            SENDGRID_KEY: todo
+        env_file: 
+            - ./.env
         ports:
             - "3000:3000"
         build:
