@@ -4,7 +4,7 @@ import { INestApplication } from '@nestjs/common';
 
 import { EmailModule } from '../../src/email/email.module';
 import { EmailService } from '../../src/email/email.service';
-import { MockEmailService, mockBody } from './mock.email.service';
+import { MockEmailService, mockBody } from '../../__mocks__/mock.email.service';
 
 
 describe('Email API (mock service)', () => {
