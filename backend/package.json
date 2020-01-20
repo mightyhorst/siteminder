@@ -16,7 +16,7 @@
     "---@tests---": "-----------------",
     "test": "jest --passWithNoTests",
     "test:unit": "echo \"todo\"",
-    "test:e2e": "echo \"todo\"",
+    "test:e2e": "jest --config ./e2e/jest.e2e.json",
     "---@deploy---": "-----------------",
     "deploy": "sls deploy",
     "deploy:offline": "sls offline",
