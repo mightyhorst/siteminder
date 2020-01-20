@@ -32,6 +32,7 @@
     "test:e2e": "cd backend && yarn run test:e2e",
     "---@deploy---": "-----------------",
     "deploy": "cd backend && yarn run deploy",
+    "deploy:offline": "cd backend && yarn run deploy:offline",
     "deploy:destroy": "cd backend && yarn run deploy:destroy",
     "deploy:destroy:all": "cd backend && yarn run deploy:destroy && cd ../devops && cdk destroy"
   },
