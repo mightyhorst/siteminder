@@ -106,7 +106,8 @@ export class EmailService {
                 data: response.data 
             }), 
             catchError(e => {
-                throw new HttpException(e.response.data, e.response.status);
+                console.log('💀 💩  e ---> ', e.message);
+                throw new HttpException(e.message, 418);
             }),
         );
     }
