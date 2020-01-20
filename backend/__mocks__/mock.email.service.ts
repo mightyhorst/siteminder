@@ -1,5 +1,5 @@
 import {Observable, of} from 'rxjs';
-import {IEmail, IEmailResponse} from '../../src/email/interfaces/index';
+import {IEmail, IEmailResponse} from '../src/email/interfaces/index';
 
 export const mockBody = {
     "recipients": [

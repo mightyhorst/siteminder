@@ -6,7 +6,7 @@ import { of } from 'rxjs';
 
 import { EmailModule } from '../../src/email/email.module';
 import { EmailService } from '../../src/email/email.service';
-import { mockBody } from './mock.email.service';
+import { mockBody } from '../../__mocks__/mock.email.service';
 
 const axiosResponse: AxiosResponse = {
     status: 202,
