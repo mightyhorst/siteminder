@@ -4,16 +4,20 @@
 This API uses [NestJs framework](https://nestjs.com/) which is basically ExpressJs with Typescript. 
 
 
+| app | url | description |
+| --- | --- | --- |
+| `Swagger` |  install |  |
+
 ### Quick start 
 
-| command | description |
-| ---                   | ---               |
-| `yarn`                |  install          |
-| `yarn run start:dev`  | run locally       |
-| `yarn run start:docker`  | run using docker       |
-| `yarn test`           | run all tests     |
-| `yarn test:unit`      | run unit tests    |
-| `yarn run deploy`      | deploys to AWS lambda    |
+| command                   | description |
+| ---                       | ---               |
+| `yarn`                    |  install          |
+| `yarn run start:dev`      | run locally       |
+| `yarn run start:docker`   | run using docker       |
+| `yarn test`               | run all tests     |
+| `yarn test:unit`          | run unit tests    |
+| `yarn run deploy`         | deploys to AWS lambda    |
 
 
 
@@ -21,16 +25,21 @@ This API uses [NestJs framework](https://nestjs.com/) which is basically Express
 ### Deploy 
 This uses Serverless Framework to deploy to AWS Lambda.
 
-| command | description |
-| ---                   | ---               |
-| `yarn run deploy`      | deploys to AWS lambda dev environment    |
-| `yarn run deploy:offline`      | to test this locally first    |
+| command                   | description |
+| ---                       | ---               |
+| `yarn run deploy`         | deploys to AWS lambda dev environment    |
+| `yarn run deploy:offline` | to test this locally first    |
 
-### Todo 
+
+# Architecture 
+
+
+# Todo 
 A few best practice checklist to do 
 
-### 0. Logs, Envs 
-[ ] Logging with Winston and middleware  
+### 0. Setup: Logs, Envs, Monorepo and Semantic commits
+[ ] Setup monorepo properly - move off lerna and too lerna workspaces with noHoist https://yarnpkg.com/blog/2018/02/15/nohoist/ to properly share packages 
+[ ] Logging with Winston as middleware  
 [ ] Logging with AWS CloudWatch 
 [ ] NestJs Exception Handling to capture custom exceptions and exceptions hierachy 
 [x] Remove all .env files and secrets. Use AWS Secrets manager and CI environments 
@@ -38,6 +47,9 @@ A few best practice checklist to do
 [ ] Use AWS Secrets manager 
 [ ] Linting 
 [ ] Coveralls.io - publish code coverage 
+[x] Semantic commits with Commitizen
+[x] Git hooks for quality control with Husky 
+[ ] Semantic release in CICD
 
 ### 1. Project Structure Practices
 
@@ -67,7 +79,7 @@ A few best practice checklist to do
 
 [x] 2.7 Use a mature logger to increase error visibility
 
-[x] use Jest - 2.8 Test error flows using your favorite test framework
+[x] 2.8 Jest - Test error flows using your favorite test framework
 
 [ ] 2.9 Discover errors and downtime using APM products
 
@@ -129,15 +141,15 @@ A few best practice checklist to do
 
 ### 5. Going To Production Practices
 
-![ ] 5.1. Monitoring! with Prometheus 
+[ ] 5.1. Monitoring! with Prometheus, OpenZipkin tracing 
 
 [x] 5.2. Increase transparency using smart logging
 
-![ ] 5.3. Delegate anything possible (e.g. gzip, SSL) to a reverse proxy
+[ ] 5.3. Delegate anything possible (e.g. gzip, SSL) to a reverse proxy
 
 [x] 5.4. Lock dependencies
 
-![ ] 5.5. Guard process uptime using the right tool
+[ ] 5.5. Guard process uptime using the right tool
 
 [x] 5.6. Utilize all CPU cores
 
@@ -147,15 +159,15 @@ A few best practice checklist to do
 
 [x] 5.9. Make your code production-ready
 
-![ ] 5.10. Measure and guard the memory usage
+[ ] 5.10. Measure and guard the memory usage
 
 [x] 5.11. Get your frontend assets out of Node
 
-![ ] 5.12. Be stateless, kill your servers almost every day
+[ ] 5.12. Be stateless, kill your servers almost every day
 
 [x] 5.13. Use tools that automatically detect vulnerabilities
 
-![ ] 5.14. Assign a transaction id to each log statement
+[ ] 5.14. Assign a transaction id to each log statement
 
 [x] 5.15. Set NODE_ENV=production
 
@@ -175,7 +187,7 @@ A few best practice checklist to do
 
 [x] 6.4. Prevent query injection vulnerabilities with ORM/ODM libraries
 
-![ ] 6.5. Collection of generic security best practices
+[ ] 6.5. Collection of generic security best practices
 
 [x] 6.6. Adjust the HTTP response headers for enhanced security
 
@@ -183,33 +195,33 @@ A few best practice checklist to do
 
 [x] 6.8. Avoid using the Node.js crypto library for handling passwords, use Bcrypt
 
-![ ] 6.9. Escape HTML, JS and CSS output
+[ ] 6.9. Escape HTML, JS and CSS output
 
 [x] 6.10. Validate incoming JSON schemas
 
-![ ] 6.11. Support blacklisting JWTs
+[ ] 6.11. Support blacklisting JWTs
 
-![ ] 6.12. Prevent brute-force attacks against authorization
+[ ] 6.12. Prevent brute-force attacks against authorization
 
 [x] 6.13. Run Node.js as non-root user
 
 [x] 6.14. Limit payload size using a reverse-proxy or a middleware
 
-![ ] 6.15. Avoid JavaScript eval statements
+[ ] 6.15. Avoid JavaScript eval statements
 
-![ ] 6.16. Prevent evil RegEx from overloading your single thread execution
+[ ] 6.16. Prevent evil RegEx from overloading your single thread execution
 
 [x] 6.17. Avoid module loading using a variable
 
-![ ] 6.18. Run unsafe code in a sandbox
+[ ] 6.18. Run unsafe code in a sandbox
 
-![ ] 6.19. Take extra care when working with child processes
+[ ] 6.19. Take extra care when working with child processes
 
 [x] 6.20. Hide error details from clients
 
 [x] 6.21. Configure 2FA for npm or Yarn
 
-[ ] No neccessary - 6.22. Modify session middleware settings
+[ ] Not neccessary - 6.22. Modify session middleware settings
 
 [ ] 6.23. Avoid DOS attacks by explicitly setting when a process should crash
 

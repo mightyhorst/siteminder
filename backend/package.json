@@ -1,8 +1,8 @@
 {
-  "name": "nest-serverless-demo",
-  "version": "1.0.0",
-  "description": "Nest TypeScript demo with Serverless framework",
-  "license": "MIT",
+  "name": "@site-minder/backend",
+  "version": "0.0.1",
+  "description": "SiteMinder Nest TypeScript with Serverless framework",
+  "license": "ISC",
   "scripts": {
     "---@build---": "-----------------",
     "install:tools": "npm i -g serverless",
@@ -25,7 +25,7 @@
   "dependencies": {
     "@nestjs/common": "6.2.2",
     "@nestjs/core": "6.2.2",
-    "@nestjs/platform-express": "6.2.2",
+    "@nestjs/platform-express": "^6.10.14",
     "@nestjs/swagger": "^4.1.14",
     "aws-serverless-express": "^3.3.5",
     "pg": "^7.11.0",
