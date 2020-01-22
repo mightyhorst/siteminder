@@ -7,9 +7,38 @@ This API uses [NestJs framework](https://nestjs.com/) which is basically Express
 | App | Link |
 | --- | --- |
 | `Swagger API` |  [https://app.swaggerhub.com/apis-docs/kitset-io/siteminder-api/1.0.1](https://app.swaggerhub.com/apis-docs/kitset-io/siteminder-api/1.0.1) | 
-| `GraphQL API` | [GraphiQL](#) |
+| `GraphQL API` | [to do](#) |
 
-### Quick start 
+
+# Quick Start
+| Endpoint | API |
+| `POST email/send` | [https://7t4kmsmgj1.execute-api.us-east-1.amazonaws.com/dev/email/send](https://7t4kmsmgj1.execute-api.us-east-1.amazonaws.com/dev/email/send) |
+
+```bash
+curl --location --request POST 'https://7t4kmsmgj1.execute-api.us-east-1.amazonaws.com/dev/email/send' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "recipients": [
+    {
+      "email": "nickymitch@gmail.com",
+      "name": "Nick Mitchell"
+    }
+  ],
+  "header": "Header",
+  "subHeader": "Sub Header",
+  "body": "Hello world ",
+  "imageUrl": "https://www.siteminder.com/wp-content/uploads/2020/01/home-page-hotel-tech-awards.png",
+  "button": "Click me",
+  "buttonUrl": "https://www.siteminder.com/",
+  "subject": "Hello, World!",
+  "sender": {
+    "email": "nickymitch@gmail.com",
+    "name": "Nick Mitchell"
+  }
+}'
+```
+
+### Development - Quick start 
 
 | command                   | description |
 | ---                       | ---               |
