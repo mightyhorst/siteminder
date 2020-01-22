@@ -1,4 +1,6 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![CircleCI](https://circleci.com/gh/mitni455/siteminder.svg?style=svg)](https://circleci.com/gh/mitni455/siteminder)
+
 
 # SiteMinder API
 This API uses [NestJs framework](https://nestjs.com/) which is basically ExpressJs with Typescript. 
@@ -63,6 +65,21 @@ This uses Serverless Framework to deploy to AWS Lambda.
 
 
 # Architecture 
+
+| Icon | Platform                   | Description |
+| ---  | ---                    | ---               |
+| <img src="https://symbols.getvecta.com/stencil_89/34_nestjs-icon.05c8d815c6.svg" width="50px" | `NestJs` |  Express with Typescript |
+| <img src="https://www.pinclipart.com/picdir/big/453-4533581_aws-tutorial-introduction-to-cloud-computing-edureka-aws.png" width="50px" /> | `AWS Lambda`         | Serverless function hosting the API |
+| <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Circleci-icon-logo.svg" width="50px" /> | `CircleCI`         | Continuous Integration and Deployment    |
+| <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ipV6F4tM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/serverless/assets/master/Icon/Framework/PNG/Serverless_Framework-icon01.png" width="50px" /> | `Serverless`         | Framework for deploying to AWS serverless IaaS    |
+| <img src="https://s.gravatar.com/avatar/acc73db51c6a7721a234035449d83809?size=496&default=retro" width="50px" /> | `AWS CDK`         | DevOps IaaS via Typescript |
+
+
+
+### CI/CD
+I used CircleCI for the CICD pipeline. 
+This build status viewed here: [https://circleci.com/gh/mitni455/siteminder](https://circleci.com/gh/mitni455/siteminder)
+
 
 
 # Best Practice Backlog 
