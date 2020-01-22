@@ -12,6 +12,7 @@ This API uses [NestJs framework](https://nestjs.com/) which is basically Express
 
 # Quick Start
 | Endpoint | API |
+| --- | --- |
 | `POST email/send` | [https://7t4kmsmgj1.execute-api.us-east-1.amazonaws.com/dev/email/send](https://7t4kmsmgj1.execute-api.us-east-1.amazonaws.com/dev/email/send) |
 
 ```bash
