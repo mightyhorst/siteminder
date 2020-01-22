@@ -1,5 +1,5 @@
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
-[![CircleCI](https://circleci.com/gh/mitni455/siteminder.svg?style=svg)](https://circleci.com/gh/mitni455/siteminder)
+[![CircleCI](https://circleci.com/gh/mitni455/siteminder/tree/feature%2Fbackend.svg?style=svg)](https://circleci.com/gh/mitni455/siteminder/tree/feature%2Fbackend)
 
 
 # SiteMinder API
@@ -78,7 +78,11 @@ This uses Serverless Framework to deploy to AWS Lambda.
 
 ### CI/CD
 I used CircleCI for the CICD pipeline. 
-This build status viewed here: [https://circleci.com/gh/mitni455/siteminder](https://circleci.com/gh/mitni455/siteminder)
+This build status viewed here: 
+
+| status | builds |
+| --- | --- |
+| [![CircleCI](https://circleci.com/gh/mitni455/siteminder/tree/feature%2Fbackend.svg?style=svg)](https://circleci.com/gh/mitni455/siteminder/tree/feature%2Fbackend) | [https://circleci.com/gh/mitni455/siteminder](https://circleci.com/gh/mitni455/siteminder) | 
 
 
 
