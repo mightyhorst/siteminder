@@ -1,6 +1,6 @@
 {
   "name": "@site-minder/core",
-  "private": false,
+  "private": true,
   "workspaces": [
     "packages/*",
     "frontend",

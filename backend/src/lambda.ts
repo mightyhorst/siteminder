@@ -12,8 +12,9 @@ const express = require('express');
 
 /**
  * @requires Swagger
+ * @todo this isnt working with serverless 
  */
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+// import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 
 /**
  * NOTE: If you get ERR_CONTENT_DECODING_FAILED in your browser, this is likely
@@ -31,10 +32,12 @@ async function bootstrapServer(): Promise<Server> {
       const nestApp = await NestFactory.create(AppModule, new ExpressAdapter(expressApp))
       nestApp.use(eventContext());
 
+
       /**
-     * @requires Swagger 
-     * @description Add swagger document builder 
-     */
+      * @requires Swagger 
+      * @description Add swagger document builder 
+      **/
+     /*
       const options = new DocumentBuilder()
          .setTitle('SiteMinder API')
          .setDescription('The SiteMinder RESTful API')
@@ -43,6 +46,7 @@ async function bootstrapServer(): Promise<Server> {
          .build();
       const document = SwaggerModule.createDocument(nestApp, options);
       SwaggerModule.setup('/', nestApp, document);
+      */
 
       await nestApp.init();
       cachedServer = createServer(expressApp, undefined, binaryMimeTypes);

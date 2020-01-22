@@ -4,9 +4,10 @@
 This API uses [NestJs framework](https://nestjs.com/) which is basically ExpressJs with Typescript. 
 
 
-| app | url | description |
-| --- | --- | --- |
-| `Swagger` |  install |  |
+| App | Link |
+| --- | --- |
+| `Swagger API` |  [https://app.swaggerhub.com/apis-docs/kitset-io/siteminder-api/1.0.1](https://app.swaggerhub.com/apis-docs/kitset-io/siteminder-api/1.0.1) | 
+| `GraphQL API` | [GraphiQL](#) |
 
 ### Quick start 
 
