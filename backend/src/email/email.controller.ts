@@ -1,8 +1,15 @@
-import { Controller, Post, Req, HttpCode } from '@nestjs/common';
+import { Controller, Post, Req, HttpCode, Body, UsePipes } from '@nestjs/common';
 import { Request } from 'express';
 import { EmailService } from './email.service';
 import { Observable } from 'rxjs';
 import { IEmail, IEmailResponse } from './interfaces/index';
+
+/**
+ * @requires Validation
+ */
+import { SendEmailDto } from './dto/send-email.dto';
+import { ValidationPipe } from '../pipes/validation.pipe';
+
 
 @Controller('email')
 export class EmailController {
@@ -11,7 +18,9 @@ export class EmailController {
 
     @Post('send')
     @HttpCode(202)
-    postSend(@Req() req: Request): Observable<any>{
+    // postSend(@Req() req: Request): Observable<any>{
+    @UsePipes(new ValidationPipe())
+    postSend(@Body() sendEmailReq: SendEmailDto): Observable<any>{
 
         const {
             recipients,
@@ -23,7 +32,7 @@ export class EmailController {
             imageUrl,
             button,
             buttonUrl
-        } = req.body;
+        } = sendEmailReq;
 
         return this.emailService.sendWelcomeEmail(
             recipients,
