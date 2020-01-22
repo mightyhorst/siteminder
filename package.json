@@ -1,5 +1,6 @@
 {
   "name": "@site-minder/core",
+  "version": "0.0.1", 
   "private": true,
   "workspaces": [
     "packages/*",
@@ -37,9 +38,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test",
+      "pre-commit": "yarn test:unit",
       "pre-push": "yarn test"
     }
-  },
-  "version": "0.0.1"
+  }
 }
