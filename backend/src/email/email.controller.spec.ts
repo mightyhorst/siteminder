@@ -6,6 +6,7 @@ import {Request} from 'express';
 import { asap } from 'rxjs/internal/scheduler/asap';
 
 import { mockBody, MockEmailService } from '../../__mocks__/mock.email.service';
+import { SendEmailDto } from "./dto/send-email.dto";
 
 import httpMocks = require('node-mocks-http');
 
@@ -33,11 +34,12 @@ describe('Email Controller', () => {
 
     it('should send email', async(done) => {
 
-        const req = httpMocks.createRequest()
-        req.body = mockBody;
-        // req.res = httpMocks.createResponse()
+        // const req = httpMocks.createRequest()
+        // req.body = mockBody;
 
-        const response = await controller.postSend(req);
+        const sendEmailBody: SendEmailDto = <SendEmailDto>mockBody;
+
+        const response = await controller.postSend(sendEmailBody);
 
         response.subscribe(
             emailResponse => {

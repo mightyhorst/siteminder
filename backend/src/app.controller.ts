@@ -1,13 +1,24 @@
-import { Controller, Get } from '@nestjs/common';
+import { 
+    Controller, 
+    Get, 
+    HttpException, 
+    HttpStatus 
+} from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+    constructor(private readonly appService: AppService) { }
 
-  @Get('healthcheck')
-  getHello(): string {
-    return this.appService.getHealthCheck();
-  }
-  
+    @Get('healthcheck')
+    @Get('health')
+    getHealth(): string {
+        return this.appService.getHealthCheck();
+    }
+
+    @Get('throws')
+    getThrowThatSucker() {
+        throw new HttpException('Boner squad', HttpStatus.I_AM_A_TEAPOT);
+    }
+    
 }

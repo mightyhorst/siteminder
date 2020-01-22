@@ -1,5 +1,5 @@
 {
-  "name": "root",
+  "name": "@site-minder/core",
   "private": true,
   "workspaces": [
     "packages/*",
@@ -25,7 +25,6 @@
     "start": "cd backend && yarn run start",
     "start:dev": "cd backend && yarn run start:dev",
     "start:docker": "cd backend && yarn run start:docker",
-
     "---@tests---": "-----------------",
     "test": "cd backend && yarn run test",
     "test:unit": "cd backend && yarn run test:unit",
@@ -41,5 +40,6 @@
       "pre-commit": "yarn test",
       "pre-push": "yarn test"
     }
-  }
+  },
+  "version": "0.0.1"
 }
