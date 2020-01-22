@@ -68,7 +68,7 @@ This uses Serverless Framework to deploy to AWS Lambda.
 
 | Icon | Platform                   | Description |
 | ---  | ---                    | ---               |
-| <img src="https://symbols.getvecta.com/stencil_89/34_nestjs-icon.05c8d815c6.svg" width="50px" | `NestJs` |  Express with Typescript |
+| <img src="https://symbols.getvecta.com/stencil_89/34_nestjs-icon.05c8d815c6.svg" width="50px" /> | `NestJs` |  Express with Typescript |
 | <img src="https://www.pinclipart.com/picdir/big/453-4533581_aws-tutorial-introduction-to-cloud-computing-edureka-aws.png" width="50px" /> | `AWS Lambda`         | Serverless function hosting the API |
 | <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Circleci-icon-logo.svg" width="50px" /> | `CircleCI`         | Continuous Integration and Deployment    |
 | <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--ipV6F4tM--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://raw.githubusercontent.com/serverless/assets/master/Icon/Framework/PNG/Serverless_Framework-icon01.png" width="50px" /> | `Serverless`         | Framework for deploying to AWS serverless IaaS    |
