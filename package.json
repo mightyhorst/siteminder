@@ -1,5 +1,6 @@
 {
-  "name": "root",
+  "name": "@site-minder/core",
+  "version": "0.0.1", 
   "private": true,
   "workspaces": [
     "packages/*",
@@ -19,21 +20,25 @@
     }
   },
   "scripts": {
+    "---@build---": "-----------------",
+    "build": "cd backend && yarn run build",
     "---@start---": "-----------------",
     "start": "cd backend && yarn run start",
     "start:dev": "cd backend && yarn run start:dev",
     "start:docker": "cd backend && yarn run start:docker",
-
     "---@tests---": "-----------------",
     "test": "cd backend && yarn run test",
     "test:unit": "cd backend && yarn run test:unit",
     "test:e2e": "cd backend && yarn run test:e2e",
     "---@deploy---": "-----------------",
-    "deploy": "cd backend && yarn run deploy"
+    "deploy": "cd backend && yarn run deploy",
+    "deploy:offline": "cd backend && yarn run deploy:offline",
+    "deploy:destroy": "cd backend && yarn run deploy:destroy",
+    "deploy:destroy:all": "cd backend && yarn run deploy:destroy && cd ../devops && cdk destroy"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test",
+      "pre-commit": "yarn test:unit",
       "pre-push": "yarn test"
     }
   }

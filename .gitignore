@@ -30,6 +30,9 @@ backend/.build
 
 #environment config
 .env
+*/.env
+frontend/.env
+backend/.env
 
 # misc
 
@@ -58,3 +61,6 @@ backend/.build
 **/*error.log
 
 
+# serverless
+*/.serverless-secrets.json
+backend/.serverless-secrets.json

@@ -20,36 +20,72 @@ jobs:
                     - v1-dependencies-
 
             ##
-            # @name Install 
+            # @name Install serverless
             ##
-            - run: yarn install 
+            - run: 
+                name: install and configure serverless 
+                command: | 
+                    sudo npm install -g serverless
+                    serverless --version
+                    sudo serverless config credentials --provider aws --key $aws_access_key_id --secret $aws_secret_access_key
+
 
             ##
-            # @name Save cache 
+            # @name Install dependencies
             ##
-            - save_cache:
-                paths:
-                    - node_modules
-                key: v1-dependencies-{{ checksum "package.json" }}
+            - run: yarn install 
+            
+            
+            ##
+            # @name Deploy
+            ##
+            - run: 
+                name: deploy 
+                command: | 
+                    yarn run deploy 
+                    
 
 
             ##
             # @name
             # @description
             ##
-            - run:
-                name: create_env_file
-                command: |
-                    touch .env 
-                    export SENDGRID_SECRET = echo $SENDGRID_SECRET | base64 --decode
-                    echo "SENDGRID_SECRET=$SENDGRID_SECRET" >> .env
-                    echo "SENDGRID_TEMPLATE=$SENDGRID_TEMPLATE" >> .env
-                    echo "aws_access_key_id=$aws_access_key_id" >> .env
-                    echo "aws_secret_access_key=$aws_secret_access_key" >> .env
-                    ls 
-                    echo "remove this asap ..." && cat .env 
+            # - run:
+            #     name: create .env file 
+            #     command: |
+            #         touch .env 
+            #         # echo "SENDGRID_SECRET=$SENDGRID_SECRET" >> .env
+            #         # echo "SENDGRID_TEMPLATE=$SENDGRID_TEMPLATE" >> .env
+            #         # echo "aws_access_key_id=$aws_access_key_id" >> .env
+            #         # echo "aws_secret_access_key=$aws_secret_access_key" >> .env
+            #         ls 
+            #         echo "remove this asap ..." && cat .env     
 
-            
+            ##
+            # @name
+            # @description
+            ##
+
+
+            ##
+            # @name
+            # @description
+            ##
+
+
+            ##
+            # @name
+            # @description
+            ##
+
+
+            ## 
+            # @name Save cache 
+            ##
+            - save_cache:
+                paths:
+                    - node_modules
+                key: v1-dependencies-{{ checksum "package.json" }}
 
 workflows:
     master_workflow:
