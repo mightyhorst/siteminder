@@ -10,15 +10,32 @@ import { IEmail, IEmailResponse } from './interfaces/index';
 import { SendEmailDto } from './dto/send-email.dto';
 import { ValidationPipe } from '../pipes/validation.pipe';
 
-
+/**
+ * Email API endpoint 
+ *
+ * @export
+ * @class EmailController
+ */
 @Controller('email')
 export class EmailController {
 
+    /**
+     * Creates an instance of EmailController.
+     * @param {EmailService} emailService
+     * @memberof EmailController
+     */
     constructor(private emailService:EmailService){}
 
+    /**
+     * POST email/send
+     * Send an email 
+     *
+     * @param {SendEmailDto} sendEmailReq - email body 
+     * @returns {Observable<any>} 
+     * @memberof EmailController
+     */
     @Post('send')
     @HttpCode(202)
-    // postSend(@Req() req: Request): Observable<any>{
     @UsePipes(new ValidationPipe())
     postSend(@Body() sendEmailReq: SendEmailDto): Observable<any>{
 
